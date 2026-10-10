@@ -4,14 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ujwal Lamsal | Developer Hub</title>
+  
+  <!-- Prevent aggressive browser caching -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
   <style>
     :root {
-      --bg-color: #0f172a;
-      --card-bg: #1e293b;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --accent: #38bdf8;
-      --accent-hover: #0284c7;
+      --bg-color: #f4a900;       /* Your custom warm golden background */
+      --card-bg: #8c0d00;         /* Complementary dark crimson card background */
+      --text-main: #e8c0c0;       /* Your requested text color */
+      --text-muted: #f3d4d4;      /* Slightly lighter shade for descriptions */
+      --accent: #b51200;          /* Your requested title color */
+      --accent-hover: #800c00;    /* Darker shade for button hover states */
+      --card-border: #a31000;     /* Border accent for cards */
     }
 
     * {
@@ -40,11 +47,14 @@
       font-size: 2.5rem;
       color: var(--accent);
       margin-bottom: 0.5rem;
+      font-weight: 800;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
     }
 
     header p {
-      color: var(--text-muted);
+      color: #5c0900;
       font-size: 1.1rem;
+      font-weight: 600;
     }
 
     .container {
@@ -60,10 +70,11 @@
 
     .card {
       background: var(--card-bg);
-      border: 1px solid #334155;
+      border: 2px solid var(--card-border);
       border-radius: 12px;
       padding: 1.5rem;
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -71,16 +82,18 @@
 
     .card:hover {
       transform: translateY(-4px);
-      border-color: var(--accent);
+      border-color: #ffd700;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25);
     }
 
     .card h3 {
       font-size: 1.25rem;
       margin-bottom: 0.5rem;
+      color: #ffffff;
     }
 
     .card p {
-      color: var(--text-muted);
+      color: var(--text-main);
       font-size: 0.95rem;
       line-height: 1.5;
       margin-bottom: 1.5rem;
@@ -94,34 +107,37 @@
     .btn {
       text-decoration: none;
       font-size: 0.875rem;
-      font-weight: 600;
-      padding: 0.5rem 1rem;
+      font-weight: 700;
+      padding: 0.6rem 1.1rem;
       border-radius: 6px;
-      transition: background-color 0.2s ease;
+      transition: background-color 0.2s ease, transform 0.1s ease;
     }
 
     .btn-primary {
-      background-color: var(--accent);
-      color: #0f172a;
+      background-color: var(--bg-color);
+      color: #700b00;
     }
 
     .btn-primary:hover {
-      background-color: var(--accent-hover);
+      background-color: #ffd24d;
+      transform: scale(1.02);
     }
 
     .btn-secondary {
-      background-color: #334155;
-      color: var(--text-main);
+      background-color: var(--accent);
+      color: #ffffff;
     }
 
     .btn-secondary:hover {
-      background-color: #475569;
+      background-color: var(--accent-hover);
+      transform: scale(1.02);
     }
 
     footer {
       margin-top: auto;
       padding-top: 3rem;
-      color: var(--text-muted);
+      color: #5c0900;
+      font-weight: 600;
       font-size: 0.875rem;
       text-align: center;
     }
